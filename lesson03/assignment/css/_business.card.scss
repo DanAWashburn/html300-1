@@ -1,0 +1,49 @@
+//Sets font for whole card
+
+main {
+  font-family: Verdana;
+  //Variable for gray used by all fonts on page
+  color: $standard-gray;
+  //Uses nesting to make "category" text (employee's name and categories such as company) bold
+  .category {
+    font-weight: bold;
+  }
+  //More nesting to make font on left side of card larger
+  .personal-info {
+    font-size: 130%; //Nesting to Italicize title on left side of card
+
+    .title {
+      font-style: italic;
+    }
+  }
+  //Seting font size for right side of card
+  .professional-info {
+    font-size: 115%;
+  }
+}
+//Creates general, overall field for information
+
+.card {
+  min-height: 100px;
+  overflow: hidden;
+  //Variable for gray around peremet
+  border: 50px solid $light-gray;
+  margin: 50px; //Puts major content (persona and professional info) in a row
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+.headshot {
+  width: 60%;
+  border-radius: 50%;
+}
+//Sets background-color and size of right portion of card
+
+.brown-field {
+  min-height: 100px;
+  overflow: hidden;
+  background-color: $brown-gray;
+  //Sets formatting for content within right portion of card
+}
