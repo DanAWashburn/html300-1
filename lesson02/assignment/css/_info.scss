@@ -1,0 +1,18 @@
+//Arranges personal content (on left side of card) vertically
+.personal-info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 350px;
+}
+
+//Arranges professional content (on right side of card) vertically
+.professional-info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border-left: 50px;
+}

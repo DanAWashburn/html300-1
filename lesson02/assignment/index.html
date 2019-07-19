@@ -1,14 +1,44 @@
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="css/style.css" />
-        <title>Assignment 02</title>
-    </head>
-    <body>
-        <main class="main">
-            <h1>title</h1>
-        </main>
-    </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Assignment 02</title>
+</head>
+
+<body>
+  <main class="card">
+    <!--Defines part of card with picture, name, and title; styling makes font gray and objects positioned vertically-->
+    <!--border color=light-gray=#F3F4F8>-->
+    <section class="personal-info">
+      <!--Inserts picture and sets class so that picture can be styled with CSS if necessary-->
+      <img src="img/unsplash-headshot.jpg" class="headshot" alt="a close-up picture of the employee's face">
+      <!--Sets class for employee's name; styling "name" makes it bold, large, and gray; "title" makes Italic-->
+      <!--font color="gray"=code:	#717171-->
+      <p class="employee"><span class="category">Steve Smith</span><br><span class="title">Project Manager</span></p>
+
+
+      <!--Defines part of pard with company, experience, etc.; styling makes font gray and medium sized, objects positioned vertically-->
+    </section>
+    <section class="professional-info">
+      <!--Put this inside another div, like outer zone and inner-zone, background color the same for each-->
+      <div class="brown-field">
+        <!--background="tan-gray"=#F5F5F5>-->
+        <!--Sets class for professional categories; styling makes it bold-->
+        <p>
+          <!--Note to instructors: these non-breaking spaces feel like a hack. What would be a better way to do it?-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="category">Company: </span>Front End Dev Co</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="category">Experience: </span>3 years</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="category">School: </span>UW</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="category">Major: </span>Marketing</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="category">Email: </span>steve@fedc.com</p>
+        <!--Sets class for linkedin logo so styling can adjust size if necessary-->
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/linkedin.svg" class="linkedin" alt="a small version of the linkedin logo">&nbsp;&nbsp;&nbsp;steve.linkedinprofile.com</p>
+      </div>
+    </section>
+  </main>
+</body>
+
 </html>
