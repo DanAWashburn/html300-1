@@ -1,19 +1,20 @@
+//Import from Google Fonts, two different ones used. See _settings.variables.scss
 @import url('https://fonts.googleapis.com/css?family=Electrolize|Farro&display=swap');
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *:after,
 *:before {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 .main {
-    padding: 2rem;
+  padding: 2rem;
 }
-
+//"Title" font used for major headings, such as name of firm
 h1 {
   font-size: 400%;
   font-family: $title;
@@ -22,64 +23,61 @@ h1 {
 h2 {
   font-family: $title;
 }
-
-
-
+//"Standard" font used for remainder of document
 p {
   font-family: $standard;
   font-size: 125%;
 }
-
+//Grid for five sections, with some white space on left and right
 .grid-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   color: $darkgrey;
-
 }
-
+//Title of firm area
 .grid-item1 {
   grid-area: 1 / 2 / 3 / 12;
-height: 100%;
+  height: 100%;
 }
-
+//Links area
 .grid-item2 {
   grid-area: 3 / 2 / 5 / 12;
-height: 100%;
+  height: 100%;
 }
-
+//Text area
 .grid-item3 {
   grid-area: 4 / 2 / 11 / 5;
-height: 100%;
+  height: 100%;
   padding: 15px;
 }
-
+//Picture area
 .grid-item4 {
   grid-area: 4 / 5 / 11 / 12;
-height: 100%;
+  height: 100%;
 }
-
+//Contact info area
 .grid-item5 {
   grid-area: 11 / 2 / 13 / 12;
-height: 100%;
-font-size: 75%;
+  height: 100%;
+  font-size: 75%;
 }
-
+//Sets styling for alost all elements in the grid
 .flex-item-standard {
   display: flex;
   flex-direction: column;
   height: 100%;
   justify-content: center;
   align-items: center;
-
 }
-
+//Sets styling for content within grid-item2
 .flex-item2 {
   display: flex;
+  flex-wrap: wrap;
   min-height: 100px;
   justify-content: space-around;
 }
-
+//Fits house picture to space
 .house {
   max-width: 100%;
   height: auto;
