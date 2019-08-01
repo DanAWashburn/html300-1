@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Assignment 06 - Bootstrap 4</title>
+  <!--Links to external Bootstrap styleshhet and scripts-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <main class="main">
+    <!--Centers the content.-->
+    <div class="container">
+      <h1>A Demo Bootstrap Website</h1>
+    </div>
+    <div class="container">
+      <!--Creates navbar and uses the light colorscheme-->
+      <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <!--Makes list items inline-->
+        <ul class="list-inline">
+          <!--Tooltips pop up messages in different directions when links hovered over-->
+          <li class="list-inline-item"><a href="index.html" data-toggle="tooltip" data-placement="left" title="Sends you back to the Home page.">Home</a></li>
+          <li class="list-inline-item"><a href="images.html" data-toggle="tooltip" data-placement="top" title="A smattering of images.">Images</a></li>
+          <li class="list-inline-item"><a href="accordion.html" data-toggle="tooltip" data-placement="bottom" title="Not the musical kind.">Accordion</a></li>
+          <li class="list-inline-item"><a href="grid.html" data-toggle="tooltip" data-placement="right" title="Gird yourself. It's grid.">Grid</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container">
+      <div class="container bg-info text-white">
+        <h2>You probably won't believe this image is real:</h2>
+        <!--Below 993px, resizes image to match screensize-->
+        <img class="img-fluid" src="https://picsum.photos/800/600?random=1" alt="a responsive image, selected at ranndom">
+      </div>
+      <div class="container bg-primary text-white">
+        <h2>Or this one, for that matter:</h2>
+        <!--Below 993px, resizes image to match screensize-->
+        <img class="img-fluid" src="https://picsum.photos/800/600?random=2" alt="a responsive image, selected at ranndom">
+      </div>
+    </div>
+  </main>
+  <!--Link to local Javascript file; runs Tooltip function-->
+  <script src="demo.js" charset="utf-8"></script>
+</body>
+
+</html>
