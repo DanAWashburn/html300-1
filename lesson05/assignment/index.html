@@ -14,43 +14,43 @@
 <!--Sets up grid for whole layout-->
     <div class="grid-wrapper">
 <!--Sets first field in grid, used for name of firm-->
-      <div class="grid-item1">
-<!--Creates flexbox inside first field of grid-->
-        <div class="flex-item-standard">
+      <div class="header">
+<!--Creates flexbox inside first field of grid using BEM-->
+        <div class="header__text">
           <h1>design firm</h1>
         </div>
       </div>
 <!--Sets second field in grid, used for various links-->
-      <div class="grid-item2">
-<!--Creates flexbox inside second field of grid-->
-        <nav class="flex-item2">
-          <p>Projects</p>
-          <p>Portfolio</p>
-          <p>Recommendations</p>
-          <p>Our Team</p>
-          <p>Press</p>
+      <div class="nav">
+<!--Creates flexbox inside second field of grid using BEM-->
+        <nav class="nav__links">
+          <a href="#">Projects</a>
+          <a href="#">Portfolio</a>
+          <a href="#">Recommendations</a>
+          <a href="#">Our Team</a>
+          <a href="#">Press</a>
         </nav>
       </div>
-<!--Sets third field in grid, used for some text-->
-      <div class="grid-item3">
+<!--Sets third field in grid, used for some text, using BEM-->
+      <div class="narrative">
 <!--Creates flexbox inside third field of grid-->
-        <div class="flex-item-standard">
+        <div class="narrative__text">
           <h2>House</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
             aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
         </div>
       </div>
 <!--Sets fourth field in grid, used for house picture-->
-      <div class="grid-item4">
+      <div class="image">
 <!--Creates flexbox inside fourth field of grid-->
-        <div class="flex-item-standard">
+        <div class="image__standard">
           <img class="house" src=https://farm9.staticflickr.com/8296/8019885131_e1ed467e3c_b.jpg alt="A white modern barn-style house surrounded by a lawn and trees">
         </div>
       </div>
-<!--Sets fifth field in grid, used for contact info-->
-      <div class="grid-item5">
+<!--Sets fifth field in grid, used for contact info; uses BEM-->
+      <div class="contact">
 <!--Creates flexbox inside fifth field of grid-->
-        <div class="flex-item-standard">
+        <div class="contact__details">
           <p>Address</p>
           <p>Email</p>
           <p>Phone Number</p>
