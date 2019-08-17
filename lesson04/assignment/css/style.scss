@@ -1,66 +1,57 @@
-#one {
-  height: 400px;
-  width: 400px;
-  background-color: blue;
+//This is a resubmission. All important changes are marked with "NEW".
+//NEW: use of variables for tiles
+$residential: #ABD1B5;
+$industrial: #79B791;
+$other: #301014;
 
-  #two {
-    height: 200px;
-    width: 200px;
-    background-color: red;
-  }
-}
-
-//I used https://www.youtube.com/watch?v=bVGOLr3JHbg as my basis/inspiration. It relates to text, not tiles but the concept is the same. Still, there's no css directly taken from the video here.
-//Please see notes in index.html about the plan for the course project.
-//Sets basic conditions for upcoming tiles
-.tile {
+//"Category" class centers material on page
+.category {
   display: flex;
   flex-direction: row;
   justify-content: center;
-//There will be a "Residential" tile with a picture of a house; when you mouse over it, the word "Residential" will appear.
-//For this and the other two tiles, I'm also considering making the picture change to black and white when you mouse over it but I have to see if that looks good.
-//The timing between the tiles should be fast enough that the user doesn't have to wait but slow enough to be graceful. I've played around with various timings and settled on this (for now).
-  &__residential {
-    background-color: red;
-    animation: fadeIn 0.75s ease-in;
-  }
-//There will be a "Industrial" tile with a picture of a building; when you mouse over it, the word "Industrial" will appear.
-  &__industrial {
-    background-color: blue;
-    animation: fadeIn 1.25s ease-in;
-  }
-//There will be some other tile with that does something related to an API; when you mouse over it, the appropriate word will appear.
-  &__other {
-    background-color: green;
-    animation: fadeIn 1.75s ease-in;
-  }
 }
-//This is a "basic" version of the eventual picture. I felt like I should have been able to put the styling in the .tile class above instead of creating a separate class for it. That didn't work, though.
-.basic {
-  margin: 25px;
-  height: 200px;
-  line-height: 200px;
-  width: 125px;
-  color: white;
-  text-align: center;
-  vertical-align: middle;
+//NEW: Use of mixing for standard boxes
+//NEW: Defining mixin for standard size and spacing of tiles
+@mixin standard() {
+//Using vw just for the hey of it
+  margin: 5vw;
+  width: 20vw;
+  height: 25vw;
 }
 
-//This fade-in applies to all tiles. There is a very subtle zoom-in effect. I want it to not even be noticed by the casual user. Instead, I want the pictures to have a feeling of lightly pulsing when the page loads.
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale3D(.95, .95, 1);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale3D(1, 1, 1);
-  }
-}
-
-//I would like to have the left margin of the name aligned with the left margin of the left-most tile (the red "Residental" one) or at least close to aligned; not sure how to do that.
 h1 {
-  text-align: center;
-  font-style: italic;
+  color: $other;
+  font-size: 400%;
+}
+
+h4 {
+  color: white;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //NEW: calling mixin for tiles
+  @include standard(); //NEW: Using transition property.
+  //Found cool website: //https://easings.net/en# , using one of its easings
+  transition: transform 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  //Also found a variety of interesting transitions at https://codepen.io/nazarelen/pen/gbLXYK
+}
+//NEW: Using variables for colors of boxes
+.r {
+  background: $residential;
+}
+
+.i {
+  background: $industrial;
+}
+
+.o {
+  background: $other;
+}
+
+//NEW: "calling" transform to increase size of box when hovered over
+.box:hover {
+  transform: scale(1.2, 1.2);
 }
