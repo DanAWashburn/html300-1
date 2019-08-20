@@ -1,0 +1,31 @@
+<script>
+import visual from './Visuals.vue';
+
+export default {
+  name: 'app',
+  components: {
+    visual
+  },
+  data () {
+    return {
+      visuals: [
+        { id: 1, name: 'The Martians', alt: 'A view of Martians', location: 'Mars'},
+        { id: 2, name: 'The Jupiterites', alt: 'A view of Jupiterites', location: 'Jupiter'},
+      ]
+    }
+  }
+}
+</script>
+
+<template>
+  <div id="app">
+    <section v-if="visuals">
+       <visual
+        v-for="visual in visuals"
+        v-bind:visual="visual"
+        v-bind:key="visual.id"
+      >
+      </visual>
+    </section>
+  </div>
+</template>
