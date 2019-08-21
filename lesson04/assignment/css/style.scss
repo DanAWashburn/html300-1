@@ -1,11 +1,57 @@
-#one{
-  height: 400px;
-  width: 400px;
-  background-color: blue;
+//This is a resubmission. All important changes are marked with "NEW".
+//NEW: use of variables for tiles
+$residential: #ABD1B5;
+$industrial: #79B791;
+$other: #301014;
 
-  #two{
-    height: 200px;
-    width: 200px;
-    background-color: red;
-  }
+//"Category" class centers material on page
+.category {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+//NEW: Use of mixing for standard boxes
+//NEW: Defining mixin for standard size and spacing of tiles
+@mixin standard() {
+//Using vw just for the hey of it
+  margin: 5vw;
+  width: 20vw;
+  height: 25vw;
+}
+
+h1 {
+  color: $other;
+  font-size: 400%;
+}
+
+h4 {
+  color: white;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //NEW: calling mixin for tiles
+  @include standard(); //NEW: Using transition property.
+  //Found cool website: //https://easings.net/en# , using one of its easings
+  transition: transform 400ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  //Also found a variety of interesting transitions at https://codepen.io/nazarelen/pen/gbLXYK
+}
+//NEW: Using variables for colors of boxes
+.r {
+  background: $residential;
+}
+
+.i {
+  background: $industrial;
+}
+
+.o {
+  background: $other;
+}
+
+//NEW: "calling" transform to increase size of box when hovered over
+.box:hover {
+  transform: scale(1.2, 1.2);
 }
