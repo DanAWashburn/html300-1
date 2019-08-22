@@ -1,22 +1,43 @@
 
 
 <script>
+
+// Later:
+// import { toggle } from "./mixins/toggle";
+// import { lower } from "./filters";
+
 export default {
-name: 'Picture',
-props: ['picture'],
+  name: 'Post', //Check that this is the actual name used
+  props: {
+    post: {
+      type: Object
+    }
+  },
 
+  data () {
+    return {
+      isShowing: true
+    };
   }
-
+};
 </script>
 
 
 <template>
 
-<div id="app">
+
   <article class="picture">
-    <h1 class="picture__alt">{{ picture.alt }} </h1>
-    <h2 class="picture__location">{{ picture.location}} </h2>
+    <b-card
+      v-show="isShowing"
+      :img-src="post.src"
+      :key="post.id"
+      :title="post.alt"
+      img-top
+      style="max-width: 100%"
+      class="my-class"
+      >
+    </b-card>
   </article>
 
-</div>
+
 </template>
