@@ -1,70 +1,56 @@
 <script>
-import Post from './picture.vue';
-// import { lower } from "../components/filters";
+import Post from '../components/Picture.vue';
 //move picture.vue to components and change this to /components/picture.vue
 export default {
-  name: "home",//check on this name
+  name: "home", //check on this name
   components: {
     Post
   },
 
-  // filters: {
-  //   lower
-  // },
-  data () {
+  data() {
     return {
-      posts: [
-
-            {
-              id: 1,
-              name: 'Hill House',
-              alt: 'A House on a Hill',
-              copy: 'TTTTTTTTTTTTTTTTTTTHHHHHHHHHHHHHHHHRRRRRRRRRRRRR',
-              src: require('../assets/ray.png')
-            },
-            {
-              id: 2,
-              name: 'Garden House',
-              alt: 'A House and a Garden',
-              copy: 'NNNNNNNNNNNNNNNNNNNNNNNNAAAAAAAAAAAAAAAA',
-              src: require('../assets/rome.png')
-            },
-            { id: 3,
-              name: 'Urban House',
-              alt: 'A House in the City',
-              copy: 'MMMMMMMMMMMMMMMMMEEEEEEEEEEEE',
-              src: require('../assets/lake.png')
-            }
-
-
+      posts: [{
+          id: 1,
+          name: 'A ray swims',
+          alt: 'Ray the Ray',
+          copy: 'this lower case that should display in upper. behold the ray.',
+          src: require('../assets/ray.png')
+        },
+        {
+          id: 2,
+          name: 'Roman Antiquities',
+          alt: 'Colosseum',
+          copy: 'more upper case text. when in rome.',
+          src: require('../assets/rome.png')
+        },
+        {
+          id: 3,
+          name: 'Boat on Lake',
+          alt: 'Lake in Glacier National Park',
+          copy: 'upper case at the upper lake.',
+          src: require('../assets/lake.png')
+        }
       ]
     };
   }
 };
-
 </script>
 
 <template>
-  <div id="app">
-    <!-- <h1>TESTING THIS IS ALL CAPS {{toLowerCase}}</h1> -->
-    <heading></heading>
-    <!--Bryce has `class="d-flex justify-content-between"`--><section v-if="posts" >
-       <post class="myclass"
-        v-for="post in posts"
-        :post="post"
-        :key="post.id"
-      >
-    </post>
+<div id="app">
+  <div class="container">
+    <!--Note to instructors: these images are not centering accurately; they're offset to the left. I can't figure out why.-->
+    <section v-if="posts">
+      <post class="myclass" v-for="post in posts" :post="post" :key="post.id">
+      </post>
     </section>
   </div>
+</div>
 </template>
 
 <style scoped lang="scss">
-
 .myclass {
-  height: 600px;
-  width: 800px;
-  border: 10px solid black;
-  margin: 25px;
+    border: 10px solid black;
+    margin: 25px;
 }
 </style>

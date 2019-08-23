@@ -1,3 +1,3 @@
-export const lower = text => {
-  return text.toLowerCase();
+export const upper = text => {
+  return text.toUpperCase();
 }
